@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+
+    <link href="/lib/css/layui.css" rel="stylesheet" />
+
+    <script src="/lib/lay/modules/element.js"></script>
+    <script src="/lib/layui.js"></script>
+    <style type="text/css">
+        .notes {
+            /*border-top: 3px solid #1AA094;*/
+            background: #fff;
+            height: 35px;
+            line-height: 35px;
+        }
+
+        .update p {
+            line-height: 30px;
+        }
+
+        .layui-form-item {
+            margin-top: 35px;
+        }
+
+        .password {
+            width:250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="layui-header header" style="line-height:60px;background:#23262E;padding-left:30px;position:fixed;left:0;top:0;width:100%;">
+
+        <a href="#">
+            <img src="/images/logo.png" width="160" />
+        </a>
+
+        <ul class="layui-nav" style="float:right;background:#23262E">
+
+            <li class="layui-nav-item">
+                <a href="">
+                    <img src="/images/index_message.png" height="16" />
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="">
+                    <img src="/images/index_mail.png" height="16" />
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="">
+                    <img src="/images/index_daiban.png" height="16" />
+                </a>
+            </li>
+
+            <li class="layui-nav-item">
+                <a href="">
+                    <img src="/images/touxiang.jpg" height="25" style="border-radius:25px;" />&nbsp;&nbsp;&nbsp;&nbsp;盖茨
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="">
+                    <img src="/images/index_logout.png" height="18" />
+                </a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    <ul class="layui-nav layui-nav-tree layui-nav-side" lay-filter="demo" style="margin-top:60px;border-radius:0px;">
+        <li style="padding-left:20px;margin-top:8px;">
+
+            <img src="/images/touxiang.jpg" height="45" style="border-radius:45px;float:left;" />
+            <div style="float:left">
+                <span style="margin-left:10px;font-weight:bold;">盖茨</span>
+                <div>
+                    <img src="/images/online.png" />在线
+                </div>
+
+            </div>
+
+        </li>
+        <li class="layui-nav-item" style="clear:both;">
+            <a href="javascript:;">系统管理</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">个人信息</a></dd>
+                
+                <dd><a href="">修改密码</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#">用户管理</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">账户添加</a></dd>
+                <dd><a href="javascript:;">用户管理</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#">流程管理</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">流程审核</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#">公告通知</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">发布公告</a></dd>
+                <dd><a href="javascript:;">公告通知</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">邮件管理</a>
+            <dl class="layui-nav-child">
+                <dd><a href="">邮件管理</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#">任务管理</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">任务管理</a></dd>
+                <dd><a href="javascript:;">布置任务</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#">通讯录</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">通讯录</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#">文件管理</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">文件管理</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="#">笔记管理</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">笔记管理</a></dd>
+            </dl>
+        </li>
+    </ul>
+    <div style="margin-left:210px;margin-top:65px;padding:10px 5px 0 5px;">
+
+        <div style="line-height:26px;height:26px;margin-bottom:10px;">
+            <h1 style="float:left;font-size:26px;">修改密码</h1>
+
+            <span class="layui-breadcrumb" style="float:right;font-size:12px;">
+                <a href="#">首页</a>
+                <a><cite>修改密码</cite></a>
+            </span>
+        </div>
+        <div style="margin-left:30px;margin-top:20px;clear:both;">
+            <form class="layui-form" action="" >
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">原密码</label>
+                        <div class="layui-input-inline">
+                            <input type="password" name="user" lay-verify="required" autocomplete="off" class="layui-input password">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">新密码</label>
+                        <div class="layui-input-inline">
+                            <input type="password" autocomplete="off" lay-verify="required" class="layui-input password">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">确认密码</label>
+                        <div class="layui-input-inline">
+                            <input type="password" lay-verify="required" autocomplete="off" class="layui-input password">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter="demo1">修改密码</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">取消</button>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+
+        <div style="width:100%;height:50px;line-height:50px;background:#F2F2F2;margin-top:50px;margin-left:-15px;position:fixed;bottom:0;">
+            <span style="margin-left:10px;">Copyright © 2017 . All rights reserved.</span>
+            <span style="margin-left:10px;float:right;">2017年06月19日, 星期一</span>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script>
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function () {
+            var element = layui.element();
+
+            //监听导航点击
+            element.on('nav(demo)', function (elem) {
+                //console.log(elem)
+                layer.msg(elem.text());
+            });
+
+
+
+        });
+
+        layui.use(['form', 'layedit', 'laydate'], function () {
+            var form = layui.form()
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate;
+
+            //创建一个编辑器
+            var editIndex = layedit.build('LAY_demo_editor');
+
+            //自定义验证规则
+            form.verify({
+                title: function (value) {
+                    if (value.length < 5) {
+                        return '标题至少得5个字符啊';
+                    }
+                }
+              , pass: [/(.+){6,12}$/, '密码必须6到12位']
+              , content: function (value) {
+                  layedit.sync(editIndex);
+              }
+            });
+
+            //监听指定开关
+            form.on('switch(switchTest)', function (data) {
+                layer.msg('开关checked：' + (this.checked ? 'true' : 'false'), {
+                    offset: '6px'
+                });
+                layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+            });
+
+            //监听提交
+            form.on('submit(demo1)', function (data) {
+                layer.alert(JSON.stringify(data.field), {
+                    title: '最终的提交信息'
+                })
+                return false;
+            });
+
+
+        });
+
+        layui.use('laydate', function () {
+            var laydate = layui.laydate;
+
+
+
+
+        });
+
+
+    </script>
+
+</body>
+</html>

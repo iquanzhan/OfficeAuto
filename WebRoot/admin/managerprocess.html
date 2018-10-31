@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<title></title>
+
+<link href="/OfficeAuto/lib/css/layui.css" rel="stylesheet" />
+<script src="/OfficeAuto/js/jquery-1.7.min.js"></script>
+<script src="/OfficeAuto/lib/lay/modules/element.js"></script>
+<script src="/OfficeAuto/lib/layui.js"></script>
+<style type="text/css">
+.notes { /*border-top: 3px solid #1AA094;*/
+	background: #fff;
+	height: 35px;
+	line-height: 35px;
+}
+
+.update p {
+	line-height: 30px;
+}
+
+.layui-form-item {
+	margin-top: 35px;
+}
+</style>
+</head>
+<body>
+	<div class="layui-header header"
+		style="line-height:60px;background:#23262E;padding-left:30px;position:fixed;left:0;top:0;width:100%;">
+
+		<a href="#"> <img src="/OfficeAuto/images/logo.png" width="160" />
+		</a>
+
+		<ul class="layui-nav" style="float:right;background:#23262E">
+
+			<li class="layui-nav-item"><a href=""> <img
+					src="/OfficeAuto/images/index_message.png" height="16" /> </a></li>
+			<li class="layui-nav-item"><a href=""> <img
+					src="/OfficeAuto/images/index_mail.png" height="16" /> </a></li>
+			<li class="layui-nav-item"><a href=""> <img
+					src="/OfficeAuto/images/index_daiban.png" height="16" /> </a></li>
+
+			<li class="layui-nav-item"><a href=""> <img
+					src="/OfficeAuto/images/touxiang.jpg" height="25"
+					style="border-radius:25px;" />&nbsp;&nbsp;&nbsp;&nbsp;盖茨 </a></li>
+			<li class="layui-nav-item"><a href=""> </a></li>
+
+
+		</ul>
+
+	</div>
+
+	<ul class="layui-nav layui-nav-tree layui-nav-side" lay-filter="demo"
+		style="margin-top:60px;border-radius:0px;">
+		<li style="padding-left:20px;margin-top:8px;"><img
+			src="/OfficeAuto/images/touxiang.jpg" height="45"
+			style="border-radius:45px;float:left;" />
+			<div style="float:left">
+				<span style="margin-left:10px;font-weight:bold;">盖茨</span>
+				<div>
+					<img src="/OfficeAuto/images/online.png" />在线
+				</div>
+
+			</div></li>
+		<li class="layui-nav-item" style="clear:both;"><a
+			href="javascript:;">系统管理</a>
+			<dl class="layui-nav-child">
+				<dd>
+					<a href="javascript:;">个人信息</a>
+				</dd>
+
+				<dd>
+					<a href="">修改密码</a>
+				</dd>
+			</dl></li>
+		<li class="layui-nav-item"><a href="#">用户管理</a>
+			<dl class="layui-nav-child">
+				<dd>
+					<a href="javascript:;">账户添加</a>
+				</dd>
+				<dd>
+					<a href="javascript:;">用户管理</a>
+				</dd>
+			</dl></li>
+		<li class="layui-nav-item layui-nav-itemed"><a href="#">流程管理</a>
+			<dl class="layui-nav-child">
+				<dd>
+					<a href="managerprocess.html" class="layui-this">流程审核</a>
+				</dd>
+			</dl></li>
+		<li class="layui-nav-item"><a href="#">公告通知</a>
+			<dl class="layui-nav-child">
+				<dd>
+					<a href="javascript:;">发布公告</a>
+				</dd>
+				<dd>
+					<a href="javascript:;">公告通知</a>
+				</dd>
+			</dl></li>
+		<li class="layui-nav-item"><a href="javascript:;">邮件管理</a>
+			<dl class="layui-nav-child">
+				<dd>
+					<a href="">邮件管理</a>
+				</dd>
+			</dl></li>
+		<li class="layui-nav-item"><a href="#">任务管理</a>
+			<dl class="layui-nav-child">
+				<dd>
+					<a href="javascript:;">任务管理</a>
+				</dd>
+				<dd>
+					<a href="javascript:;">布置任务</a>
+				</dd>
+			</dl></li>
+		<li class="layui-nav-item"><a href="#">通讯录</a>
+			<dl class="layui-nav-child">
+				<dd>
+					<a href="javascript:;">通讯录</a>
+				</dd>
+			</dl></li>
+		<li class="layui-nav-item"><a href="#">文件管理</a>
+			<dl class="layui-nav-child">
+				<dd>
+					<a href="javascript:;">文件管理</a>
+				</dd>
+			</dl></li>
+		<li class="layui-nav-item"><a href="#">笔记管理</a>
+			<dl class="layui-nav-child">
+				<dd>
+					<a href="javascript:;">笔记管理</a>
+				</dd>
+			</dl></li>
+	</ul>
+	<div style="margin-left:210px;margin-top:65px;padding:10px 5px 0 5px;">
+
+		<div style="line-height:26px;height:26px;margin-bottom:10px;">
+			<h1 style="float:left;font-size:26px;">流程审核</h1>
+
+			<span class="layui-breadcrumb" style="float:right;font-size:12px;">
+				<a href="#">首页</a> <a><cite>流程审核</cite>
+			</a> </span>
+		</div>
+		<div style="clear:both;"></div>
+		<div style="clear:both;margin-top:20px;">
+
+
+			<div style="float:left;margin-right:20px;">
+
+				<div class="layui-input-inline">
+					<input type="text" name="username" lay-verify="required"
+						style="height:30px;" placeholder="请输入申请人" autocomplete="off"
+						class="layui-input">
+
+				</div>
+				<div class="layui-inline" style="margin-left:-4px;">
+					<button class="layui-btn layui-btn-normal layui-btn-small"
+						style="height:30px;">
+						<i class="layui-icon">&#xe615;</i>
+					</button>
+				</div>
+
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+
+		<table class="layui-table" lay-skin="line" style="margin-top:10px;">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>类型</th>
+					<th>标题</th>
+					<th>时间</th>
+					<th>申请人</th>
+					<th>审核时间</th>
+					<th>审核人</th>
+					<th>审核状态</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>10</td>
+					<td>请假</td>
+					<td>我想请一个假</td>
+					<td>2017-6-21 14:08:16</td>
+					<td>成笑笑</td>
+					<td>2017-6-21 14:08:16</td>
+					<td>成笑笑</td>
+					<td><button class="layui-btn layui-btn-mini layui-btn-danger">未批准</button>
+					</td>
+					<td>
+						<button class="layui-btn layui-btn-normal layui-btn-small">
+							查看</button>
+						<button ids="1"
+							class="layui-btn layui-btn-normal layui-btn-small notice">
+							<i class="layui-icon"></i>
+						</button>
+						<button class="layui-btn layui-btn-normal layui-btn-small delete">
+							<i class="layui-icon"></i>
+						</button></td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>请假</td>
+					<td>我想请一个假</td>
+					<td>2017-6-21 14:08:16</td>
+					<td>成笑笑</td>
+					<td>2017-6-21 14:08:16</td>
+					<td>成笑笑</td>
+					<td><button class="layui-btn layui-btn-mini">已批准</button>
+					</td>
+					<td>
+						<button class="layui-btn layui-btn-normal layui-btn-small">
+							查看</button>
+						<button ids="1"
+							class="layui-btn layui-btn-normal layui-btn-small notice">
+							<i class="layui-icon"></i>
+						</button>
+						<button class="layui-btn layui-btn-normal layui-btn-small delete">
+							<i class="layui-icon"></i>
+						</button></td>
+				</tr>
+
+			</tbody>
+		</table>
+
+
+
+		<div
+			style="width:100%;height:50px;line-height:50px;background:#F2F2F2;margin-top:50px;margin-left:-15px;position:fixed;bottom:0;">
+			<span style="margin-left:10px;">Copyright © 2017 . All rights
+				reserved.</span> <span style="margin-left:10px;float:right;">2017年06月19日,
+				星期一</span>
+		</div>
+
+
+	</div>
+
+
+
+
+	<script>
+		//注意：导航 依赖 element 模块，否则无法进行功能性操作
+		layui.use('element', function() {
+			var element = layui.element();
+
+			//监听导航点击
+			element.on('nav(demo)', function(elem) {
+				//console.log(elem)
+				//layer.msg(elem.text());
+			});
+
+		});
+
+		layui
+				.use(
+						[ 'form', 'layedit', 'laydate' ],
+						function() {
+							var form = layui.form(), layer = layui.layer, layedit = layui.layedit, laydate = layui.laydate;
+
+							//创建一个编辑器
+							var editIndex = layedit.build('LAY_demo_editor');
+
+							//监听提交
+							form.on('submit(demo1)', function(data) {
+
+								return false;
+							});
+
+						});
+
+		layui.use('laydate', function() {
+			var laydate = layui.laydate;
+		});
+
+		//弹出一个iframe层
+		$('.notice').on('click', function() {
+
+			var item = $(this);
+			var ids = item.attr("ids");
+
+			layer.open({
+				type : 2,
+				title : '修改账号信息',
+				maxmin : true,
+				shadeClose : true, //点击遮罩关闭层
+				area : [ '1000px', '520px' ],
+				content : 'updateuser.html'
+			});
+		});
+
+		//删除逻辑
+		$(".delete").click(function() {
+
+			var check = confirm("确认要删除吗？");
+
+			if (!check) {
+				return;
+			}
+			var item = $(this);
+
+			var id = item.attr("ids");
+
+			$.post("/Office/User/DeleteUser", {
+				"id" : id
+			}, function(data) {
+
+				if (data["status"] != 'ok') {
+
+					layer.msg(datas["msg"]);
+					window.location = "/OfficeAuto/admin/manageruser.jsp";
+				} else {
+					layer.msg(datas["msg"]);
+				}
+
+			});
+		});
+	</script>
+
+</body>
+</html>
